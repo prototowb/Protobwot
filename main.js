@@ -3,30 +3,14 @@ const fs = require('fs');
 const Enmap = require('enmap');
 require('dotenv-flow').config();
 const bot = new Discord.Client();
-const config = {
-    token: process.env.TOKEN,
-    prefix: process.env.PREFIX
-}
-
 bot.commands = new Enmap();
 
-bot.on("guildMemberAdd", member => {
 
-    let welcomeChannel = member.guild.channels.find(channel => channel.name === "welcome");
-    welcomeChannel.send(`Welcome ${member.displayName}! You are our ${member.guild.memberCount}. Member! :tada:`);
-    welcomeChannel.send(`Nice to have you here! o/`);
-    
-    //let memberRole = member.guild.roles.find(role => role.id == "");
-    //member.addRole(memberRole);
-    
-    //member.send("");
-})
-    
 bot.on("guildMemberRemove", member => {
     
     let welcomeChannel = member.guild.channels.find(channel => channel.name === "cheerio");
     welcomeChannel.send(` ${member.displayName} just left :open_mouth:`);
-})
+});
 
 /*function helpCommand(args, msg) {
     if (args.length == 0) {
@@ -58,4 +42,4 @@ fs.readdir('./commands', async (err, files) => {
     });
 });
 
-bot.login(config.token);
+bot.login();
