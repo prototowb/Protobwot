@@ -7,13 +7,6 @@ const bot = new Discord.Client();
 
 bot.commands = new Enmap();
 
-
-bot.on("guildMemberRemove", member => {
-    
-    let welcomeChannel = member.guild.channels.find(channel => channel.name === "cheerio");
-    welcomeChannel.send(` ${member.displayName} just left :open_mouth:`);
-});
-
 /*function helpCommand(args, msg) {
     if (args.length == 0) {
         msg.channel.send("um..? try ~help [topic]");
