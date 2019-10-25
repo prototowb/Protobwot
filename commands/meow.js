@@ -8,7 +8,7 @@ exports.run = async (bot, msg, args) => {
         .then(json => json.file);
 
     let embed = new RichEmbed()
-        .setAuthor(msg.member.user.tag, msg.member.user.avatarURL)
+        //.setAuthor(msg.member.user.tag, msg.member.user.avatarURL)
         .setColor('0x9c6303')
         .setImage(meow)
         .setFooter('A random kitten!')
