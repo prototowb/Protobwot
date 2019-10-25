@@ -2,7 +2,9 @@ const Discord = require(`discord.js`);
 const fs = require('fs');
 const Enmap = require('enmap');
 require('dotenv-flow').config();
+
 const bot = new Discord.Client();
+
 bot.commands = new Enmap();
 
 
