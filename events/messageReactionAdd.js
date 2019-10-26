@@ -31,6 +31,12 @@ module.exports = async (bot, messageReaction, user) => {
     const js4 = msg.guild.roles.get('636233704511111168'); // learning
     const js5 = msg.guild.roles.get('630345013192294428'); // hobby 
 
+    const py1 = msg.guild.roles.get('630366623987138590'); // Pro
+    const py2 = msg.guild.roles.get('636234196091666440'); // experienced
+    const py3 = msg.guild.roles.get('636234078911332382'); // advanced
+    const py4 = msg.guild.roles.get('630366576868065290'); // learning
+    const py5 = msg.guild.roles.get('630365193129558027'); // hobby 
+
 
     //Verify
     if (messageReaction.emoji.name == '✅' && msg.channel.id == welcomeChannel.id) {
