@@ -45,19 +45,19 @@ module.exports = async (bot, messageReaction, user) => {
     if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
         switch (messageReaction.emoji.name) {
             case '⏭':
-                member.removeRole(j1).catch(console.error);
+                member.removeRole(js1).catch(console.error);
                 break;
             case '⏩':
-                member.removedRole(j2).catch(console.error);
+                member.removedRole(js2).catch(console.error);
                 break;
             case '➡':
-                member.removeRole(j3).catch(console.error);
+                member.removeRole(js3).catch(console.error);
                 break;
             case '↪':
-                member.removeRole(j4).catch(console.error);
+                member.removeRole(js4).catch(console.error);
                 break;
             case '🔄':
-                member.removeRole(j5).catch(console.error);
+                member.removeRole(js5).catch(console.error);
                 break;
             default:
                 break;                                              
