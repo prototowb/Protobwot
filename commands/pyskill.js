@@ -5,11 +5,11 @@ exports.run = async (bot, msg, args) => {
 
     await msg.delete().catch(O_o => {});
 
-    const js1 = msg.guild.roles.get('630345655017275392'); // Pro
-    const js2 = msg.guild.roles.get('636233826766553110'); // experienced
-    const js3 = msg.guild.roles.get('630345241672548392'); // advanced
-    const js4 = msg.guild.roles.get('636233704511111168'); // learning
-    const js5 = msg.guild.roles.get('630345013192294428'); // hobby 
+    const py1 = msg.guild.roles.get('630366623987138590'); // Pro
+    const py2 = msg.guild.roles.get('636234196091666440'); // experienced
+    const py3 = msg.guild.roles.get('636234078911332382'); // advanced
+    const py4 = msg.guild.roles.get('630366576868065290'); // learning
+    const py5 = msg.guild.roles.get('630365193129558027'); // hobby 
 
     const filter = (reaction, user) => ['⏭', '⏩', '➡', '↪', '🔄'].includes(reaction.emoji.name) && user.id === msg.author.id;
 
@@ -19,11 +19,11 @@ exports.run = async (bot, msg, args) => {
         
         Please select a JavaScript skill-level
 
-        ⏭  ${js1.toString()}
-        ⏩  ${js2.toString()}
-        ➡  ${js3.toString()}
-        ↪  ${js4.toString()}
-        🔄  ${js5.toString()}
+        ⏭  ${py1.toString()}
+        ⏩  ${py2.toString()}
+        ➡  ${py3.toString()}
+        ↪  ${py4.toString()}
+        🔄  ${py5.toString()}
 
         `)
         .setColor(0xaaecf0)
@@ -41,5 +41,5 @@ exports.run = async (bot, msg, args) => {
 };
 
 exports.help = {
-    name: 'jsskill'
+    name: 'pyskill'
 };

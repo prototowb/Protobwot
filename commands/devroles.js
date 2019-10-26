@@ -23,7 +23,7 @@ exports.run = async (bot, msg, args) => {
         .setTitle('Available Roles')
         .setDescription(`
         
-        Welcome to the **${msg.guild.name}**! You may choose out of this set of roles:
+        Welcome to the **${msg.guild.name}**! You may choose out of this set of roles.
 
         🎮 ${a.toString()}
         📲 ${b.toString()}
@@ -33,7 +33,7 @@ exports.run = async (bot, msg, args) => {
 
         `)
         .setColor(0xaaecf0)
-        .setFooter(`Guild ID: ${msg.guild.id}`);
+        .setFooter(`.`);
 
         msg.channel.send(embed).then(async message => {
 
