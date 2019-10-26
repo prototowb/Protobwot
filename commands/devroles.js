@@ -32,7 +32,7 @@ exports.run = async (bot, msg, args) => {
         🎨 ${e.toString()}
 
         `)
-        .setColor(0xdd9323)
+        .setColor(0xaaecf0)
         .setFooter(`Guild ID: ${msg.guild.id}`);
 
         msg.channel.send(embed).then(async message => {

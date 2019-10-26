@@ -24,7 +24,7 @@ exports.run = async (bot, msg, args) => {
         🗒 ${e.toString()}
 
         `)
-        .setColor(0xdd9323)
+        .setColor(0xaaecf0)
         .setFooter(`ID: ${msg.author.id}`);
 
 
