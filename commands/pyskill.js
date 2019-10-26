@@ -17,7 +17,7 @@ exports.run = async (bot, msg, args) => {
         .setTitle('Available Roles')
         .setDescription(`
         
-        Please select a JavaScript skill-level
+        Please select a Python skill-level
 
         ⏭  ${py1.toString()}
         ⏩  ${py2.toString()}
