@@ -39,7 +39,7 @@ module.exports = async (bot, messageReaction, user) => {
         member.addRole(gamesTag).catch(console.error);
         messageReaction.remove(member).catch(console.error);
         return messageReaction.remove(member).catch(console.error);
-    }
+    };
   
     //Dev-roles
     if (['🎮', '📲', '💾', '💠', '🎨'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
@@ -63,7 +63,7 @@ module.exports = async (bot, messageReaction, user) => {
                 break;                                              
         }
         return;
-    }
+    };
 
     //Skill-Set JavaScript
     if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
@@ -87,7 +87,7 @@ module.exports = async (bot, messageReaction, user) => {
                 break;                                              
         }
         return;
-    }
+    };
 
     //Skill-Set Python
     if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
@@ -111,5 +111,5 @@ module.exports = async (bot, messageReaction, user) => {
                 break;                                              
         }
         return;
-    }
+    };
 };

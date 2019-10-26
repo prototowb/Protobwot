@@ -39,9 +39,9 @@ module.exports = async (bot, messageReaction, user) => {
                 break;                                              
         }
         return;
-    }
+    };
 
-    //Skill-Set
+    //Skill-Set JavaScript
     if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
         switch (messageReaction.emoji.name) {
             case '⏭':
@@ -63,5 +63,29 @@ module.exports = async (bot, messageReaction, user) => {
                 break;                                              
         }
         return;
-    }
+    };
+
+    //Skill-Set Python
+    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
+        switch (messageReaction.emoji.name) {
+            case '⏭':
+                member.removeRole(py1).catch(console.error);
+                break;
+            case '⏩':
+                member.removedRole(py2).catch(console.error);
+                break;
+            case '➡':
+                member.removeRole(py3).catch(console.error);
+                break;
+            case '↪':
+                member.removeRole(py4).catch(console.error);
+                break;
+            case '🔄':
+                member.removeRole(py5).catch(console.error);
+                break;
+            default:
+                break;                                              
+        }
+        return;
+    };
 };
