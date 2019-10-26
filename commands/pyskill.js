@@ -14,7 +14,7 @@ exports.run = async (bot, msg, args) => {
     const filter = (reaction, user) => ['⏭', '⏩', '➡', '↪', '🔄'].includes(reaction.emoji.name) && user.id === msg.author.id;
 
     const embed = new RichEmbed()
-        .setTitle('')
+        .setTitle('Python')
         .setDescription(`
         
         Please select a Python skill-level
