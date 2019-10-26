@@ -11,7 +11,7 @@ exports.run = async (bot, msg, args) => {
     const d = msg.guild.roles.get('637405739769659397'); // WebDev
     const e = msg.guild.roles.get('637405741795377200'); // GraphicDesign
 
-    const filter = (reaction, user) => ['📋', '📜', '📃', '📑', '🗒'].includes(reaction.emoji.name) && user.id === msg.author.id;
+    const filter = (reaction, user) => ['📋', '📜', '📃', '📑', '🎨'].includes(reaction.emoji.name) && user.id === msg.author.id;
 
     const embed = new RichEmbed()
         .setTitle('Available Roles')
@@ -23,7 +23,7 @@ exports.run = async (bot, msg, args) => {
         📜 ${b.toString()}
         📃 ${c.toString()}
         📑 ${d.toString()}
-        🗒 ${e.toString()}
+        🎨 ${e.toString()}
 
         `)
         .setColor(0xdd9323)
@@ -35,7 +35,7 @@ exports.run = async (bot, msg, args) => {
             await message.react('📜');
             await message.react('📃');
             await message.react('📑');
-            await message.react('🗒');
+            await message.react('🎨');
         });
 
 };

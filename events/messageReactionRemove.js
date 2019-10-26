@@ -11,7 +11,7 @@ module.exports = async (bot, messageReaction, user) => {
     const d = msg.guild.roles.get('637405739769659397'); // WebDev
     const e = msg.guild.roles.get('637405741795377200'); // GraphicDesign
 
-    if (['📋', '📜', '📃', '📑', '🗒'].includes(messageReaction.emoji.name) && msg.channel.id === channel.id) {
+    if (['📋', '📜', '📃', '📑', '🎨'].includes(messageReaction.emoji.name) && msg.channel.id === channel.id) {
         switch (messageReaction.emoji.name) {
             case '📋':
                 member.removeRole(a).catch(console.error);
@@ -25,7 +25,7 @@ module.exports = async (bot, messageReaction, user) => {
             case '📑':
                 member.removeRole(d).catch(console.error);
                 break;
-            case '🗒':
+            case '🎨':
                 member.removeRole(e).catch(console.error);
                 break;
             default:
