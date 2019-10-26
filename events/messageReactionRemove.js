@@ -60,7 +60,7 @@ module.exports = async (bot, messageReaction, user) => {
                 member.removeRole(js1).catch(console.error);
                 break;
             case '⏩':
-                member.removedRole(js2).catch(console.error);
+                member.removeRole(js2).catch(console.error);
                 break;
             case '➡':
                 member.removeRole(js3).catch(console.error);
@@ -84,7 +84,7 @@ module.exports = async (bot, messageReaction, user) => {
                 member.removeRole(py1).catch(console.error);
                 break;
             case '⏩':
-                member.removedRole(py2).catch(console.error);
+                member.removeRole(py2).catch(console.error);
                 break;
             case '➡':
                 member.removeRole(py3).catch(console.error);
