@@ -23,7 +23,7 @@ exports.run = async (bot, msg, args) => {
         .setTitle('Available Roles')
         .setDescription(`
         
-        Welcome to **${msg.guild.name}**! You may choose out of roles you can join/leave from:
+        Welcome to the **${msg.guild.name}**! You may choose out of a set of roles you can join/leave from:
 
         🎮 ${a.toString()}
         📲 ${b.toString()}

@@ -23,14 +23,21 @@ module.exports = async (bot, messageReaction, user) => {
     const d = msg.guild.roles.get('596657590759456780'); // WebDev
     const e = msg.guild.roles.get('636187174013763584'); // GraphicDesign 
 
+    const j1 = msg.guild.roles.get('630345655017275392'); // Pro
+    const j2 = msg.guild.roles.get('636233826766553110'); // experienced
+    const j3 = msg.guild.roles.get('630345241672548392'); // advanced
+    const j4 = msg.guild.roles.get('636233704511111168'); // learning
+    const j5 = msg.guild.roles.get('630345013192294428'); // hobby 
+
+
+    //Verify
     if (messageReaction.emoji.name == '✅' && msg.channel.id == welcomeChannel.id) {
         member.addRole(verify).catch(console.error);
         messageReaction.remove(member).catch(console.error);
         return messageReaction.remove(member).catch(console.error);
     }
-
-    
-
+  
+    //Dev-roles
     if (['🎮', '📲', '💾', '💠', '🎨'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
         switch (messageReaction.emoji.name) {
             case '🎮':
@@ -47,6 +54,30 @@ module.exports = async (bot, messageReaction, user) => {
                 break;
             case '🎨':
                 member.addRole(e).catch(console.error);
+                break;
+            default:
+                break;                                              
+        }
+        return;
+    }
+
+    //Skill-Set
+    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
+        switch (messageReaction.emoji.name) {
+            case '⏭':
+                member.addRole(j1).catch(console.error);
+                break;
+            case '⏩':
+                member.addRole(j2).catch(console.error);
+                break;
+            case '➡':
+                member.addRole(j3).catch(console.error);
+                break;
+            case '↪':
+                member.addRole(j4).catch(console.error);
+                break;
+            case '🔄':
+                member.addRole(j5).catch(console.error);
                 break;
             default:
                 break;                                              
