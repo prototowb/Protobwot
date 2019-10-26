@@ -1,7 +1,7 @@
 module.exports = async (bot, messageReaction, user) => {
 
     const msg = messageReaction.message;
-    const channel = msg.guild.channels.find(c => c.name == 'welcome');
+    const channel = msg.guild.channels.find(c => c.name == 'roles');
     const member = msg.guild.members.get(user.id);
     if (member.user.bot) return;
 
