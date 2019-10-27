@@ -72,7 +72,7 @@ module.exports = async (bot, messageReaction, user) => {
     };
 
     //Skill-Set JavaScript
-    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && (embed.title).includes(`JavaScript`)) {
+    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
         switch (messageReaction.emoji.name) {
             case '⏭':
                 member.addRole(js1).catch(console.error);
