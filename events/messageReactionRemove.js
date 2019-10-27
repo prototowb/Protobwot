@@ -54,7 +54,7 @@ module.exports = async (bot, messageReaction, user) => {
     };
 
     //Skill-Set JavaScript
-    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && embed.title.includes(`JavaScript`)) {
+    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && (embed.title).includes(`JavaScript`)) {
         switch (messageReaction.emoji.name) {
             case '⏭':
                 member.removeRole(js1).catch(console.error);
@@ -78,7 +78,7 @@ module.exports = async (bot, messageReaction, user) => {
     };
 
     //Skill-Set Python
-    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && embed.title.includes(`Python`)) {
+    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && (embed.title).includes(`Python`)) {
         switch (messageReaction.emoji.name) {
             case '⏭':
                 member.removeRole(py1).catch(console.error);
