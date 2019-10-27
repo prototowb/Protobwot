@@ -22,7 +22,7 @@ module.exports = async (bot, messageReaction, user) => {
     const py5 = msg.guild.roles.get('630365193129558027'); // hobby 
 
     //Skill-Set Python
-    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && RichEmbed(title == 'Phyton')) {
+    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && embed.title.setTitle('Python')) {
         switch (messageReaction.emoji.name) {
             case '⏭':
                 member.addRole(py1).catch(console.error);
