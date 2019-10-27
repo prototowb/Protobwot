@@ -48,7 +48,7 @@ module.exports = async (bot, messageReaction, user) => {
     };
   
     //Dev-roles
-    if (['🎮', '📲', '💾', '💠', '🎨'].includes(messageReaction.emoji.name) && /*msg.channel.id === rolesChannel.id*/ embed.title.includes('Python')) {
+    if (['🎮', '📲', '💾', '💠', '🎨'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
         switch (messageReaction.emoji.name) {
             case '🎮':
                 member.addRole(a).catch(console.error);
@@ -72,7 +72,7 @@ module.exports = async (bot, messageReaction, user) => {
     };
 
     //Skill-Set JavaScript
-    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && embed.title.includes('Python')) {
+    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && embed.title.includes(`JavaScript`)) {
         switch (messageReaction.emoji.name) {
             case '⏭':
                 member.addRole(js1).catch(console.error);
