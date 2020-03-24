@@ -1,6 +1,6 @@
 module.exports = bot => {
     console.log("Connected as " + bot.user.tag);
-    bot.user.setActivity("FREE HONGKONG", {type: "WATCHING"});
+    bot.user.setActivity("you guys code.", {type: "WATCHING"});
 
     const roles = bot.channels.find(c => c.name == 'roles'); //define permanent role picker channel
     const welcome = bot.channels.find(c => c.name == 'welcome'); //define permanent "verify" welcome channel
