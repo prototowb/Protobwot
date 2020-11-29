@@ -1,6 +1,6 @@
 module.exports = bot => {
     console.log("Connected as " + bot.user.tag);
-    bot.user.setActivity("you guys code.", {type: "WATCHING"});
+    bot.user.setActivity("you guys", {type: "WATCHING"});
 
     const roles = bot.channels.find(c => c.name == 'roles'); //define permanent role picker channel
     const welcome = bot.channels.find(c => c.name == 'welcome'); //define permanent "verify" welcome channel
@@ -11,4 +11,5 @@ module.exports = bot => {
     });
 
     roles.fetchMessages({ limit: 10}).then(collected => console.log('Fetched' + collected.size + 'messages.')).catch(console.err);
+    welcome.fetchMessages({ limit: 10}).then(collected => console.log('Fetched' + collected.size + 'messages.')).catch(console.err);
 };

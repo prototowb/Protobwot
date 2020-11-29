@@ -3,7 +3,7 @@ module.exports = async (bot, messageReaction, user) => {
     const msg = messageReaction.message;
     const rolesChannel = msg.guild.channels.find(c => c.name == 'roles');
     const welcomeChannel = msg.guild.channels.find(c => c.name == 'welcome');
-    const member = msg.guild.members.get(user.id);
+    const member = msg.guild.members.cache.get(user.id);
     if (member.user.bot) return;
 /*  
     const a = msg.guild.roles.get('637405729460060180'); // GameDev
