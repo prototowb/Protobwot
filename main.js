@@ -11,7 +11,7 @@ bot.commands = new Enmap();
     if (args.length == 0) {
         msg.channel.send("um..? try ~help [topic]");
     } else {
-        msg.channel.send("It looks like you need help with " + args)
+        msg.channel.send("It looks like you need help with " + args);
     }
 }*/
 

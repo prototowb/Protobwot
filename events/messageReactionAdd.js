@@ -1,24 +1,16 @@
-module.exports = async (bot, messageReaction, user) => {
+module.exports = async(bot, messageReaction, user) => {
 
-    const msg = messageReaction.message;
     const rolesChannel = msg.guild.channels.find(c => c.name == 'roles');
     const welcomeChannel = msg.guild.channels.find(c => c.name == 'welcome');
+    const msg = messageReaction.message;
     const member = msg.guild.members.cache.get(user.id);
     if (member.user.bot) return;
-/*  
-    const a = msg.guild.roles.get('637405729460060180'); // GameDev
-    const b = msg.guild.roles.get('637405735919157279'); // MobileDev
-    const c = msg.guild.roles.get('637405738280550400'); // AppDev
-    const d = msg.guild.roles.get('637405739769659397'); // WebDev
-    const e = msg.guild.roles.get('637405741795377200'); // GraphicDesign
-
-    const verify = msg.guild.roles.get('637606594367979530'); // Verified */
 
     //ProtoHub Live:
     const verifiedTag = msg.guild.roles.get('635765691374370826');
     const aboutTag = msg.guild.roles.get('636469815267033109');
-    const gamesTag = msg.guild.roles.get('635755204884561940');
-    
+    const learnTag = msg.guild.roles.get('661313746316034069');
+
     const a = msg.guild.roles.get('559036576378781726'); // GameDev
     const b = msg.guild.roles.get('635154697963044865'); // MobileDev
     const c = msg.guild.roles.get('635154523752628227'); // AppDev
@@ -35,18 +27,18 @@ module.exports = async (bot, messageReaction, user) => {
     const py2 = msg.guild.roles.get('636234196091666440'); // experienced
     const py3 = msg.guild.roles.get('636234078911332382'); // advanced
     const py4 = msg.guild.roles.get('630366576868065290'); // learning
-    const py5 = msg.guild.roles.get('630365193129558027'); // hobby 
+    const py5 = msg.guild.roles.get('630365193129558027'); // hobby  
 
 
     //Verify
     if (messageReaction.emoji.name == '✅' && msg.channel.id == welcomeChannel.id) {
         member.addRole(verifiedTag).catch(console.error);
         member.addRole(aboutTag).catch(console.error);
-        member.addRole(gamesTag).catch(console.error);
+        member.addRole(learnTag).catch(console.error);
         messageReaction.remove(member).catch(console.error);
         return messageReaction.remove(member).catch(console.error);
     };
-  
+
     //Dev-roles
     if (['🎮', '📲', '💾', '💠', '🎨'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
         switch (messageReaction.emoji.name) {
@@ -66,7 +58,7 @@ module.exports = async (bot, messageReaction, user) => {
                 member.addRole(e).catch(console.error);
                 break;
             default:
-                break;                                              
+                break;
         }
         return;
     };
@@ -90,7 +82,7 @@ module.exports = async (bot, messageReaction, user) => {
                 member.addRole(js5).catch(console.error);
                 break;
             default:
-                break;                                              
+                break;
         }
         return;
     };

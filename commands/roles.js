@@ -1,9 +1,9 @@
 const { RichEmbed } = require('discord.js');
 const { prefix } = require('../config');
 
-exports.run = async (bot, msg, args) => {
+exports.run = async(bot, msg, args) => {
 
-    await msg.delete().catch(O_o=>{});
+    await msg.delete().catch(O_o => {});
 
     const a = msg.guild.roles.get('559036576378781726'); // GameDev
     const b = msg.guild.roles.get('635154697963044865'); // MobileDev

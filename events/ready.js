@@ -9,7 +9,4 @@ module.exports = bot => {
     fetchedChannels.forEach(c => {
         c.fetchMessages({ limit: 10 }).then(collected => console.log(`Fetched ${collected.size} message in ${c.name}.`));
     });
-
-    roles.fetchMessages({ limit: 10}).then(collected => console.log('Fetched' + collected.size + 'messages.')).catch(console.err);
-    welcome.fetchMessages({ limit: 10}).then(collected => console.log('Fetched' + collected.size + 'messages.')).catch(console.err);
 };
