@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const { prefix } = require('../config');
 
 exports.run = async (bot, msg, args) => {
@@ -13,7 +13,7 @@ exports.run = async (bot, msg, args) => {
 
     const filter = (reaction, user) => ['⏭', '⏩', '➡', '↪', '🔄'].includes(reaction.emoji.name) && user.id === msg.author.id;
 
-    const embed = new RichEmbed()
+    const embed = new MessageEmbed()
         .setTitle('JavaScript')
         .setDescription(`
         

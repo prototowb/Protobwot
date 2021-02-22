@@ -1,9 +1,12 @@
 const Discord = require(`discord.js`);
+const { Client, Intents } = require('discord.js');
 const fs = require('fs');
 const Enmap = require('enmap');
 require('dotenv-flow').config();
 
-const bot = new Discord.Client();
+const myIntents = new Intents();
+myIntents.add('GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS');
+const bot = new Client({ ws: { intents: myIntents } });
 
 bot.commands = new Enmap();
 
@@ -37,4 +40,4 @@ fs.readdir('./commands', async (err, files) => {
     });
 });
 
-bot.login();
+bot.login(process.env.CLIENT_TOKEN);

@@ -1,14 +1,15 @@
 module.exports = (bot, member) => {
     bot.once("guildMemberAdd", member => {
 
-        let welcomeChannel = member.guild.channels.find(channel => channel.name === "arrival");
+        const minicatpat = bot.emojis.cache.find(emoji => emoji.name === "minicatpat");
+        let welcomeChannel = member.guild.channels.cache.find(channel => channel.name === "welcome");
         welcomeChannel.send("\n" +
-        `██▓▒░ **${member.displayName}** has joined Proto**Hub** ░▒▓██\n` +
-        "Welcome <@" + member.id + ">! You are our " + `${member.guild.memberCount}.` + "Member! :tada:\n" +
+        `░▒▓██  **${member.displayName}** has joined Proto**Code** :tada: \n` +
+        "Welcome <@" + member.id + ">! You are our " + `${member.guild.memberCount}.` + "Member! ${minicatpat} \n" +
         "឵឵ ឵឵឵\n");
         
         //let memberRole = member.guild.roles.find(role => role.id == "");
-        //member.addRole(memberRole);
+        //member.roles.add(memberRole);
         
         //member.send("");
     });

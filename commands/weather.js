@@ -9,7 +9,7 @@ exports.run = (bot, msg, args) => {
         var location = result[0].location;
 
 
-        const embed = new Discord.RichEmbed()
+        const embed = new Discord.MessageEmbed()
             .setDescription(`**${current.skytext}**`)
             .setAuthor(`Weather for ${current.observationpoint}`)
             .setThumbnail(current.imageUrl)
