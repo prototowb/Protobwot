@@ -1,7 +1,8 @@
 module.exports = bot => {
+    let prefix = process.env.PREFIX;
 
     console.log("Connected as " + bot.user.tag);
-    bot.user.setActivity("you guys", {type: "WATCHING"});
+    bot.user.setActivity(`${prefix}help | soon.tm` ,{type: "WATCHING"});
 
     const roles = bot.channels.cache.find(c => c.name === 'mod-spam'); //define permanent role picker channel
     const welcome = bot.channels.cache.find(c => c.name === 'welcome'); //define permanent "verify" welcome channel

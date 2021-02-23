@@ -30,7 +30,7 @@ exports.run = async(bot, msg, args) => {
         .setFooter(`ID: ${msg.author.id}`);
 
 
-    msg.channel.send(embed).then(async message => {
+        msg.channel.send(embed).then(async message => {
 
         await message.react('🎮');
         await message.react('📲');

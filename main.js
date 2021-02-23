@@ -6,17 +6,9 @@ require('dotenv-flow').config();
 
 const myIntents = new Intents();
 myIntents.add('GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS');
-const bot = new Client({ ws: { intents: myIntents } });
+const bot = new Client({ partials: ['USER', 'GUILD_MEMBER', 'MESSAGE', 'CHANNEL', 'REACTION'] }, { ws: { intents: myIntents } });
 
 bot.commands = new Enmap();
-
-/*function helpCommand(args, msg) {
-    if (args.length == 0) {
-        msg.channel.send("um..? try ~help [topic]");
-    } else {
-        msg.channel.send("It looks like you need help with " + args);
-    }
-}*/
 
 fs.readdir('./events/', async (err, files) => {
     if (err) return console.error;
@@ -40,4 +32,8 @@ fs.readdir('./commands', async (err, files) => {
     });
 });
 
-bot.login(process.env.CLIENT_TOKEN);
+
+bot.package = require("./package.json");
+bot.on("warn", console.warn);
+bot.on("error", console.error);
+bot.login(process.env.CLIENT_TOKEN).catch(console.error);
