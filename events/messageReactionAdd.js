@@ -14,7 +14,7 @@ module.exports = async(bot, messageReaction, user) => {
     const learnTag = msg.guild.roles.cache.get('661313746316034069');
     //const verifiedEmoji = bot.emojis.cache.get('813136374068281344');
 
-    // Verification added Profile Roles
+    // Verification **added** Profile Roles
     if (messageReaction.emoji.name === '✅' && msg.channel.id === welcomeChannel.id) {
         member.roles.add(memberRole).catch(error => console.error('Failed to add role: ', error));
         member.roles.add(aboutTag).catch(error => console.error('Failed to add role: ', error));
@@ -52,7 +52,7 @@ module.exports = async(bot, messageReaction, user) => {
                     return msg.channel.send(`Error adding you to this role: **${err.message}**.`);
                 });
                 msg.channel
-                    .send(`You have been added to the **${a.name}** role!`)
+                    .send(`You have been **added** to the **${a.name}** role!`)
                     .catch((err) => {
                         console.log(err);
                     })
@@ -70,7 +70,7 @@ module.exports = async(bot, messageReaction, user) => {
                     return msg.channel.send(`Error adding you to this role: **${err.message}**.`);
                 });
                 msg.channel
-                    .send(`You have been added to the **${b.name}** role!`)
+                    .send(`You have been **added** to the **${b.name}** role!`)
                     .catch((err) => {
                         console.log(err);
                     })
@@ -88,7 +88,7 @@ module.exports = async(bot, messageReaction, user) => {
                     return msg.channel.send(`Error adding you to this role: **${err.message}**.`);
                 });
                 msg.channel
-                    .send(`You have been added to the **${c.name}** role!`)
+                    .send(`You have been **added** to the **${c.name}** role!`)
                     .catch((err) => {
                         console.log(err);
                     })
@@ -106,7 +106,7 @@ module.exports = async(bot, messageReaction, user) => {
                     return msg.channel.send(`Error adding you to this role: **${err.message}**.`);
                 });
                 msg.channel
-                    .send(`You have been added to the **${d.name}** role!`)
+                    .send(`You have been **added** to the **${d.name}** role!`)
                     .catch((err) => {
                         console.log(err);
                     })
@@ -124,7 +124,7 @@ module.exports = async(bot, messageReaction, user) => {
                     return msg.channel.send(`Error adding you to this role: **${err.message}**.`);
                 });
                 msg.channel
-                    .send(`You have been added to the **${e.name}** role!`)
+                    .send(`You have been **added** to the **${e.name}** role!`)
                     .catch((err) => {
                         console.log(err);
                     })

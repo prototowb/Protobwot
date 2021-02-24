@@ -9,16 +9,6 @@ module.exports = async (bot, message) => {
     let prefix = bot.config.prefix;
     if(!message.content.startsWith(prefix)) return;
 
-    //handle the command
-    //split the String into the command and all arguments
-    // const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    // const command = args.shift().toLowerCase();
-    // const cmd = bot.commands.get(command);
-    // if (!cmd) return;
-
-    // cmd.run(bot, message, args);
-
-
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
     let msg = message.content.toLowerCase();
     let cmd = args.shift().toLowerCase();
@@ -48,8 +38,8 @@ module.exports = async (bot, message) => {
         const expirationTime = timestamps.get(member.id) + cooldownAmount;
 
         if (now < expirationTime) {
-            const timeleft = (expirationTime - now) / 1000;
-            return message.channel.send(`Calm down bruh - please wait **${timeLefttoFixed(1)}** seconds before trying the command again.`);
+            const timeLeft = (expirationTime - now) / 1000;
+            return message.channel.send(`Calm down bruh - please wait **${timeLeft.toFixed(1)}** seconds before trying the command again.`);
         }
 
         timestamps.set(member.id, now);

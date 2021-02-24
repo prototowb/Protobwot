@@ -27,18 +27,48 @@ module.exports = async(bot, messageReaction, user) => {
         switch (messageReaction.emoji.name) {
             case '🎮':
                 member.roles.remove(a).catch(console.error);
+                msg.channel
+                    .send(`You have been **removed** from the **${a.name}** role!`)
+                    .catch((err) => {
+                        console.log(err);
+                    })
+                    .then((m) => m.delete({ timeout: 2100 }));
                 break;
             case '📲':
                 member.roles.remove(b).catch(console.error);
+                msg.channel
+                    .send(`You have been **removed** from the **${b.name}** role!`)
+                    .catch((err) => {
+                        console.log(err);
+                    })
+                    .then((m) => m.delete({ timeout: 2100 }));
                 break;
             case '💾':
                 member.roles.remove(c).catch(console.error);
+                msg.channel
+                    .send(`You have been **removed** from the **${c.name}** role!`)
+                    .catch((err) => {
+                        console.log(err);
+                    })
+                    .then((m) => m.delete({ timeout: 2100 }));
                 break;
             case '💠':
                 member.roles.remove(d).catch(console.error);
+                msg.channel
+                    .send(`You have been **removed** from the **${d.name}** role!`)
+                    .catch((err) => {
+                        console.log(err);
+                    })
+                    .then((m) => m.delete({ timeout: 2100 }));
                 break;
             case '🎨':
                 member.roles.remove(e).catch(console.error);
+                msg.channel
+                    .send(`You have been **removed** from the **${e.name}** role!`)
+                    .catch((err) => {
+                        console.log(err);
+                    })
+                    .then((m) => m.delete({ timeout: 2100 }));
                 break;
             default:
                 break;
