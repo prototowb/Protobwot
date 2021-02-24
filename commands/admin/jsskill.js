@@ -1,20 +1,17 @@
 const { MessageEmbed } = require('discord.js');
-const { prefix } = require('../config');
+const { prefix } = require('../../config');
 
 exports.run = async (bot, msg, args) => {
-
     await msg.delete().catch(O_o => {});
 
-    const js1 = msg.guild.roles.get('630345655017275392'); // Pro
-    const js2 = msg.guild.roles.get('636233826766553110'); // experienced
-    const js3 = msg.guild.roles.get('630345241672548392'); // advanced
-    const js4 = msg.guild.roles.get('636233704511111168'); // learning
-    const js5 = msg.guild.roles.get('630345013192294428'); // hobby 
-
-    const filter = (reaction, user) => ['⏭', '⏩', '➡', '↪', '🔄'].includes(reaction.emoji.name) && user.id === msg.author.id;
+    const js1 = msg.guild.roles.cache.get('630345655017275392'); // Pro
+    const js2 = msg.guild.roles.cache.get('636233826766553110'); // experienced
+    const js3 = msg.guild.roles.cache.get('630345241672548392'); // advanced
+    const js4 = msg.guild.roles.cache.get('636233704511111168'); // learning
+    const js5 = msg.guild.roles.cache.get('630345013192294428'); // hobby 
 
     const embed = new MessageEmbed()
-        .setTitle('JavaScript')
+        .setTitle('Available JavaScript Roles')
         .setDescription(`
         
         Please select a JavaScript skill-level
@@ -41,5 +38,13 @@ exports.run = async (bot, msg, args) => {
 };
 
 exports.help = {
-    name: 'jsskill'
+    name: 'jsskill',
+    description: 'nope',
+    usage: "~help [command]",
+    example: '~halp'
+};
+
+exports.conf = {
+    aliases: ['jsskill'],
+    cooldown: 3
 };

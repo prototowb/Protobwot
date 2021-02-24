@@ -41,21 +41,94 @@ module.exports = async(bot, messageReaction, user) => {
     if (['🎮', '📲', '💾', '💠', '🎨'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
         switch (messageReaction.emoji.name) {
             case '🎮':
-                member.roles.add(a).catch(console.error);
+                if (member.roles.cache.has(a.id)) {
+                    //message.delete(2000);
+                    return msg.channel
+                        .send('You are already in this role.')
+                        .then((m) => m.delete({ timeout: 2100 }));
+                }
+                member.roles.add(a).catch((err) => {
+                    console.log(err);
+                    return msg.channel.send(`Error adding you to this role: **${err.message}**.`);
+                });
+                msg.channel
+                    .send(`You have been added to the **${a.name}** role!`)
+                    .catch((err) => {
+                        console.log(err);
+                    })
+                    .then((m) => m.delete({ timeout: 2100 }));
                 break;
             case '📲':
-                member.roles.add(b).catch(console.error);
+                if (member.roles.cache.has(b.id)) {
+                    //message.delete(2000);
+                    return msg.channel
+                        .send('You are already in this role.')
+                        .then((m) => m.delete({ timeout: 2100 }));
+                }
+                member.roles.add(b).catch((err) => {
+                    console.log(err);
+                    return msg.channel.send(`Error adding you to this role: **${err.message}**.`);
+                });
+                msg.channel
+                    .send(`You have been added to the **${b.name}** role!`)
+                    .catch((err) => {
+                        console.log(err);
+                    })
+                    .then((m) => m.delete({ timeout: 2100 }));
                 break;
             case '💾':
-                member.roles.add(c).catch(console.error);
+                if (member.roles.cache.has(c.id)) {
+                    //message.delete(2000);
+                    return msg.channel
+                        .send('You are already in this role.')
+                        .then((m) => m.delete({ timeout: 2100 }));
+                }
+                member.roles.add(c).catch((err) => {
+                    console.log(err);
+                    return msg.channel.send(`Error adding you to this role: **${err.message}**.`);
+                });
+                msg.channel
+                    .send(`You have been added to the **${c.name}** role!`)
+                    .catch((err) => {
+                        console.log(err);
+                    })
+                    .then((m) => m.delete({ timeout: 2100 }));
                 break;
             case '💠':
-                member.roles.add(d).catch(console.error);
+                if (member.roles.cache.has(d.id)) {
+                    //message.delete(2000);
+                    return msg.channel
+                        .send('You are already in this role.')
+                        .then((m) => m.delete({ timeout: 2100 }));
+                }
+                member.roles.add(d).catch((err) => {
+                    console.log(err);
+                    return msg.channel.send(`Error adding you to this role: **${err.message}**.`);
+                });
+                msg.channel
+                    .send(`You have been added to the **${d.name}** role!`)
+                    .catch((err) => {
+                        console.log(err);
+                    })
+                    .then((m) => m.delete({ timeout: 2100 }));
                 break;
             case '🎨':
-                member.roles.add(e).catch(console.error);
-                break;
-            default:
+                if (member.roles.cache.has(e.id)) {
+                    //message.delete(2000);
+                    return msg.channel
+                        .send('You are already in this role.')
+                        .then((m) => m.delete({ timeout: 2100 }));
+                }
+                member.roles.add(e).catch((err) => {
+                    console.log(err);
+                    return msg.channel.send(`Error adding you to this role: **${err.message}**.`);
+                });
+                msg.channel
+                    .send(`You have been added to the **${e.name}** role!`)
+                    .catch((err) => {
+                        console.log(err);
+                    })
+                    .then((m) => m.delete({ timeout: 2100 }));
                 break;
         }
         return;

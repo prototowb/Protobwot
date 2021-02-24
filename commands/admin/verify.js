@@ -1,5 +1,5 @@
 const Discord = require(`discord.js`);
-const { prefix } = require('../config');
+const { prefix } = require('../../config');
 
 exports.run = (bot, msg, args) => {
 
@@ -13,5 +13,13 @@ exports.run = (bot, msg, args) => {
 };
 
 exports.help = {
-    name: 'verify'
+    name: 'verify',
+    description: 'nope',
+    usage: "~help [command]",
+    example: '~halp'
+};
+
+exports.conf = {
+    aliases: ['verify'],
+    cooldown: 3
 };
