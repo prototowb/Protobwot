@@ -12,5 +12,13 @@ exports.run = (bot, msg, args) => {
 };
 
 exports.help = {
-    name: 'say'
+    name: 'say',
+    description: 'nope',
+    usage: "~help [command]",
+    example: '~halp'
+};
+
+exports.conf = {
+    aliases: ['say'],
+    cooldown: 3
 };
