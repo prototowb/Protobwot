@@ -1,1 +1,1 @@
-# Protobwot - A Discord Reaction Roles Bot
+# Protobwot - A Discord Reaction Roles(and more) Bot
