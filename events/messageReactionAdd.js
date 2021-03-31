@@ -1,8 +1,8 @@
 module.exports = async(bot, messageReaction, user) => {
 
     const msg = messageReaction.message;
-    const rolesChannel = msg.guild.channels.cache.find(c => c.name === 'mod-spam');
-    const welcomeChannel = msg.guild.channels.cache.find(c => c.name == 'welcome');
+    const rolesChannel = msg.guild.channels.cache.find('652120907279761408');
+    const welcomeChannel = msg.guild.channels.cache.find('811372639133630475');
     const member = msg.guild.members.cache.get(user.id);
     if (member.user.bot) return;
 
