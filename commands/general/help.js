@@ -1,9 +1,7 @@
 const Discord = require("discord.js");
-require('dotenv-flow').config();
 
 exports.run = (bot, msg, args) => {
-    
-    let prefix = process.env.PREFIX; 
+
 
     if (!args[0]) {
         let module = bot.helps.array();
@@ -12,7 +10,7 @@ exports.run = (bot, msg, args) => {
         const embed = new Discord.MessageEmbed()
         .setColor(0x1d1d1d)
         .setTimestamp(new Date())
-        .setDescription(`um..? try \`${prefix}help [command] to get more specific information about a command\``)
+        .setDescription(`um..? try \`${bot.config.prefix}help [command] to get more specific information about a command\``)
         .setTitle("A Bot")
 
         for (const mod of module) {

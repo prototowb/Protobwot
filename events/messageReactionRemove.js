@@ -99,28 +99,4 @@ module.exports = async(bot, messageReaction, user) => {
         }
         return;
     };
-
-    //Skill-Set Python
-    if (['⏭', '⏩', '➡', '↪', '🔄'].includes(messageReaction.emoji.name) && msg.channel.id === rolesChannel.id) {
-        switch (messageReaction.emoji.name) {
-            case '⏭':
-                member.roles.remove(py1).catch(console.error);
-                break;
-            case '⏩':
-                member.roles.remove(py2).catch(console.error);
-                break;
-            case '➡':
-                member.roles.remove(py3).catch(console.error);
-                break;
-            case '↪':
-                member.roles.remove(py4).catch(console.error);
-                break;
-            case '🔄':
-                member.roles.remove(py5).catch(console.error);
-                break;
-            default:
-                break;
-        }
-        return;
-    };
 };

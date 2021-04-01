@@ -1,6 +1,6 @@
-require('dotenv-flow').config();
+
 
 module.exports = {
-    prefix: process.env.PREFIX,
+    prefix: ".",
     owners: ["191212812968656896"]
 };

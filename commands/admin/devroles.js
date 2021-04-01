@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 const { prefix } = require('../../config');
 
 exports.run = async (bot, msg, args) => {
-	await msg.delete().catch((O_o) => {});
+	await msg.delete().catch(O_o => {});
 
 	const a = msg.guild.roles.cache.get('559036576378781726'); // GameDev
 	const b = msg.guild.roles.cache.get('635154697963044865'); // MobileDev
@@ -34,21 +34,6 @@ exports.run = async (bot, msg, args) => {
 		await message.react('💾');
 		await message.react('💠');
 		await message.react('🎨');
-
-		// message
-		// 	.awaitReactions(filter, {
-		// 		max: 1,
-		// 		time: 30000,
-		// 		errors: ['time'],
-		// 	})
-		// 	.then((collected) => {
-		// 		const reaction = collected.first();
-
-				
-		// 	}).catch(collected => {
-		// 		console.log(err);
-		// 		return msg.channel.send(`couldn't add your role: **${err.message}**.`);
-		// 	});
 	});
 };
 

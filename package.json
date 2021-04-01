@@ -1,11 +1,12 @@
 {
     "name": "protobwot",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "",
+    "Author": "Tobias Rauer",
     "main": "main.js",
     "dependencies": {
         "discord.js": "^12.5.1",
-        "dotenv-flow": "^3.1.0",
+        "dotenv-flow": "^3.2.0",
         "enmap": "^5.2.1",
         "node": "^14.8.0",
         "node-fetch": "^2.6.1",
