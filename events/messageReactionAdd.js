@@ -19,7 +19,7 @@ module.exports = async(bot, messageReaction, user) => {
         member.roles.add(memberRole).catch(error => console.error('Failed to add role: ', error));
         member.roles.add(aboutTag).catch(error => console.error('Failed to add role: ', error));
         member.roles.add(learnTag).catch(error => console.error('Failed to add role: ', error));
-        return messageReaction.users.remove().catch(error => console.error('Failed to add role: ', error));
+        return messageReaction.users.remove(member).catch(error => console.error('Failed to remove reaction: ', error));
     };
 
     //#######################
