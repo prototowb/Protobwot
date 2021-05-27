@@ -5,7 +5,7 @@ module.exports = (bot, member) => {
         let arrivalChannel = bot.channels.cache.get('651816461983285268');
         arrivalChannel.send("\n" +
         `░▒▓██  **${member.displayName}** has joined proto**code** :tada: \n` +
-        "Welcome <@" + member.id + ">! You are our " + `${member.guild.memberCount}.` + `Member! ${catcoolblush} \n` +
+        "Welcome <@" + member.id + ">! " + `${catcoolblush} \n` +
         "឵឵ ឵឵឵\n");
         
         //let memberRole = member.guild.roles.find(role => role.id == "");
